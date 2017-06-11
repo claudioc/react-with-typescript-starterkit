@@ -1,4 +1,4 @@
-# React with TypeScript: a starter
+# React with TypeScript: a starter kit
 
 ## This project puts together and gets you going with:
 
@@ -20,7 +20,7 @@
 - (rendered) component testing
     - this part would have needed another dependency and more configurations ([AirBnB's Enzyme](https://github.com/airbnb/enzyme))
 - A proper _production_ build
-    - since this is a starter and getting stuff production ready is where opinions tend to diverge the most, I prefer to not add any optimization here
+    - since this is a starter and getting stuff production ready is where opinions tend to diverge the most, I prefer to not add any optimization here. What you want to do in this case is to extract all the CSS in one file (Webpack's `ExtractTextPlugin`), compress the JavaScript (Webpack's `UglifyJsPlugin`) and give every asset a unique name (with some sort of hashing)
 
 ## This project is very little opinionated but still:
 

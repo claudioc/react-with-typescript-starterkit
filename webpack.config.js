@@ -16,11 +16,11 @@ const webpackConfig = {
     path: path.join(__dirname, '/dist')
   },
 
-  devtool: 'source-map',
-
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
+
+  devtool: 'source-map',
 
   plugins: [
     // Use the index.html file as the template,
@@ -106,6 +106,17 @@ const webpackConfig = {
 }
 
 if (environment === 'development') {
+  // Turn off performance hints during development because we don't do any
+  // splitting or minification in interest of speed. These warnings become
+  // cumbersome.
+  webpackConfig.performance = {
+    hints: false
+  }
+
+  // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
+  // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
+  webpackConfig.devtool = 'cheap-module-source-map'
+
   webpackConfig.devServer = {
     port,
     contentBase: context,
