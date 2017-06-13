@@ -13,8 +13,7 @@
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --progress --debug --config ./webpack.config.js",
     "build": "NODE_ENV=production webpack",
-    "test": "jest",
-    "postinstall": "typings install"
+    "test": "jest"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -54,7 +53,6 @@
     "ts-jest": "^20.0.6",
     "typed-css-modules-loader": "0.0.9",
     "typescript": "^2.3.4",
-    "typings": "^2.1.1",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }

@@ -1,5 +1,0 @@
-{
-  "globalDependencies": {
-    "react-render-html": "file:@types/react-render-html.d.ts"
-  }
-}
