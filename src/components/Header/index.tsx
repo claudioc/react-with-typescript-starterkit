@@ -1,7 +1,8 @@
 import * as React from 'react'
-import './style.css'
+import * as style from './style.css'
 
-// React.SFC is a shorthand for React.StatelessComponent (plus the F of Functional)
 export const Header:React.SFC<React.Props<any>> = () => (
-  <h1 className="Header">React with TypeScript: a starter kit</h1>
+  <div className={style.header}>
+    <h1>Come se fosse antani</h1>
+  </div>
 )

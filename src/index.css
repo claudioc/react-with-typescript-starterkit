@@ -1,4 +1,5 @@
-html, body {
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -7,15 +8,33 @@ html {
   height: 100%;
 }
 
+html {font-size: 1em;}
+
 body {
-  font-family: sans-serif;
   background-color: white;
-  color: navy;
-  min-height: 100%;
-  padding: 8px;
-  font-size: 18px;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
 }
 
-main {
-  height: 100vh;
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
 }
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small {font-size: 0.75em;}
