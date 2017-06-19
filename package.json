@@ -48,7 +48,7 @@
     "style-loader": "^0.18.2",
     "ts-jest": "^20.0.6",
     "typescript": "^2.3.4",
-    "webpack": "^2.6.1",
+    "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.5"
   }
 }

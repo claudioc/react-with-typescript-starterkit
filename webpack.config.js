@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 const path = require('path')
 const environment = process.env.NODE_ENV
+const webpack = require('webpack')
 
 const port = 3000
 const context = path.join(__dirname, '/src')
@@ -23,6 +24,8 @@ const webpackConfig = {
   devtool: 'source-map',
 
   plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin(),
+
     // Use the index.html file as the template,
     // and just fill its body
     new HtmlWebpackPlugin({
