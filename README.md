@@ -20,7 +20,7 @@
 - (rendered) component testing
     - this part would have needed another dependency and more configurations ([AirBnB's Enzyme](https://github.com/airbnb/enzyme))
 - [CSS modules](https://github.com/css-modules/css-modules)
-    - the modules are maybe at the moment the most common way to deal with CSS componentization and namespacing in React, but there are quite a few alternatives that you may consider before getting married to that technique. Take a look at [Fela](http://fela.js.org) for example, or [Styled Components](https://github.com/styled-components/styled-components) and pick the best which suits your need
+    - there is [separate branch, "css-modules",](https://github.com/claudioc/react-with-typescript-starterkit/tree/css-modules) with (basic) support to CSS modules, but even though the modules are maybe at the moment the most common way to deal with CSS componentization and namespacing in React, there are quite a few alternatives that you may consider before getting married to that technique. Take a look at [Fela](http://fela.js.org) for example, or [Styled Components](https://github.com/styled-components/styled-components) and pick the best which suits your need
 - A proper _production_ build
     - since this is a starter and getting stuff production ready is where opinions tend to diverge the most, I prefer to not add any optimization here. What you probably want to do in this case is to extract all the CSS in one file (Webpack's `ExtractTextPlugin`), compress the JavaScript (Webpack's `UglifyJsPlugin`) and give every asset a unique name (with some sort of hashing). Of course, you might want to get [Critical](https://github.com/addyosmani/critical) too, and so on and so forth
 
