@@ -3,13 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const autoprefixer = require('autoprefixer')
+const marked = require("marked");
+const renderer = new marked.Renderer();
+
 const path = require('path')
 const environment = process.env.NODE_ENV
 const webpack = require('webpack')
 
 const port = 3000
 const context = path.join(__dirname, '/src')
-
 const webpackConfig = {
   entry: './src/index.tsx',
   output: {
@@ -63,7 +65,18 @@ const webpackConfig = {
         loader: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
-
+      {
+        test: /\.md$/,
+        use: [{
+          loader: "html-loader"
+        },{
+          loader: "markdown-loader",
+          options: {
+            gfm: true,
+            renderer
+          }
+        }]
+      },
       {
         test: /\.css$/,
         use: [
@@ -71,8 +84,13 @@ const webpackConfig = {
           {
             loader: require.resolve('css-loader'),
             options: {
-              importLoaders: 1
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
             }
+          },
+          {
+            loader: require.resolve('typed-css-modules-loader')
           },
           {
             loader: require.resolve('postcss-loader'),
