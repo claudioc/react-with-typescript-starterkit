@@ -5,7 +5,7 @@
 - React and ReactDOM
 - TypeScript
 - CSS (with autoprefixer)
-- Webpack 2 (with hot module reload and web server)
+- [Webpack 3](https://webpack.js.org/) (with hot module reload and web server)
 - [Jest](https://facebook.github.io/jest/) for testing
 - simple asset management
 
